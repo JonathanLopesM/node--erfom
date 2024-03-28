@@ -7,7 +7,7 @@ const server = http.createServer((request, response) => {
   }
 })
 
-server.listen(3000).once('listening', () => {
+server.listen(3003).once('listening', () => {
   console.log(`Server started in process`, processId)
 })
 
@@ -16,3 +16,8 @@ process.on('SIGTERM', ()=> {
   console.log('server ending', new Date().toISOString()) 
   server.close(()=> process.exit())
 })
+
+// vamos simular que um erro aleatorio aconteceu
+// setTimeout(()=>{
+//   process.exit(1)
+// }, Math.random() * 1e4) // 10.000

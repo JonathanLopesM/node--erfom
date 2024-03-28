@@ -7,7 +7,7 @@ const server = http.createServer((request, response) => {
   }
 })
 
-server.listen(3000).once('listening', () => {
+server.listen(3003).once('listening', () => {
   console.log(`Server started in process`, processId)
 })
 
